@@ -48,14 +48,14 @@ public class CwDB{
 						new FileInputStream(fr), "UTF8"));
 		
 		int counter = 0;
-		String line = null;
-		while( (line = br.readLine()) != null )
+//		String line = null;
+		while(br.readLine() != null)
 			counter++;
 		if( (counter % 2) != 0)
 			counter--;
 		br.close();
 		
-		fr = new File(filename);//mozliwe ze niekonieczne
+//		fr = new File(filename);//mozliwe ze niekonieczne
 		br=new BufferedReader(new InputStreamReader(
 				new FileInputStream(fr), "UTF8"));
 		for(int i = 0; i < counter; i+=2){
